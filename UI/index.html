@@ -5,10 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-compatible" content="ie=edge">
         <title>iReporter</title>
+        <link rel="stylesheet" href="/home/valerie/Desktop/iReporter-Valerie/UI/styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body>
         <div id=container1>
-            <div id=logo></div>
+            <div id=logo>
+                <img src="/home/valerie/Desktop/iReporter-Valerie/UI/iReporter-logo.png" alt="iReporter logo">
+            </div>
+            <div id=newsfeed>
+                <a href="">check out our newsfeed</a>
+            </div>
             <div id=about>
                 <h1>iReporter</h1>
                 <p>
@@ -18,8 +25,53 @@
                     general public. Users can also report on things that needs government intervention
                 </p>
             </div>
-            <footer></footer>
+            <footer>
+                <P>
+                    iReporter@gmail.com
+                    <span>::::</span>
+                    +254 717 245777
+                </P>
+            </footer>
         </div>
+        
+            <div id=container2>
+                <form>
+                    username:<br>
+                    <input type="text" name="username" value="example">
+                    <br>
+                    Email:<br>
+                    <input type="text" name="email" value="example@gmail.com">
+                    <br>
+                    Create Password:<br>
+                    <input type="text" name="password" value="password"> 
+                    <br>
+                    Confirm Password:<br>
+                    <input type="text" name="confirm_password" value="password">
+                    <br>
+                    <input type="submit" value="Sign up">
+                </form>
+                <p>Already have an account?</p>
+                <button id=sign_in>Sign in</button>   
+            </div>
+       
+       
+            <div id=container3>
+               <form>
+                    username/Email:<br>
+                    <input type="text" name="usernameOrEmail" value="example">
+                    <br>
+                    Password:<br>
+                    <input type="text" name="password" value="password"> 
+                    <br>
+                    <input type="submit" value="Log in">
+                </form>
+                <p>Don't have an account?</p>
+                <button id=sign_up>sign up</button>   
+            </div>
+       
+
+            <script src="/home/valerie/Desktop/iReporter-Valerie/UI/myapp.js"></script>
+
 
         
     </body>
