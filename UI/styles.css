@@ -82,7 +82,7 @@ input[type=text], select {
 
 input[type=submit] {
     width: 100%;
-    background-color: rgb(216, 43, 43);
+    background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -92,7 +92,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    background-color: #4CAF50;;
+    background-color: green;
 }
 
 #formContainer {
@@ -119,9 +119,44 @@ input[type=submit]:hover {
     
 }
 
+form {
+    border: solid 1px #ccc;
+    padding: 5px;
+    border-radius: 5px;
+}
+
 #past_records {
     width: 70%;
 
+}
+
+#summary {
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#redFlagsRaised, #interventionsRequestedSummary, #resolvedIssues, #pendingIssues, #rejectedIssues {
+    width:15%;
+    border-right:solid #ccc 1px;
+    text-align: center;
+    padding: 5px;
+    padding-bottom: 15px;
+}
+
+#redflag, #intervention {
+    height: 100px;
+}
+
+#add_location, #add_location2 {
+    background-color: rgb(20, 18, 18);
+}
+
+#totalIssuesRaised {
+    width: 15%;
+    text-align: center;
+    padding: 5px;
+    padding-bottom: 15px;
 }
 
 #icon {
@@ -153,6 +188,7 @@ input[type=file] {
 
 #past_records {
     width: 60%;
+    margin-top: 20px;
 }
 
 #individual_record {
@@ -165,7 +201,7 @@ input[type=file] {
     box-sizing: border-box;
 }
 
-.profile_label, .intervention_label, .record_type {
+.profile_label, .intervention_label, .record_type, .location_stamp {
     width: 25%;
     text-align: center;
     padding: 12px 20px;
