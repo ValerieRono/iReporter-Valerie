@@ -13,8 +13,8 @@
 
 <ul class="navbar">
   <li class="active"><a href="index.html">iReporter</a></li>
-  <li class="right"><a href="sign_up.html">Sign up</a></li>
-  <li class="right"><a href="sign_in.html">Sign in</a></li>
+  <li class="right"><a href="index.html">Sign Out</a></li>
+  
 </ul>
 <div id=main_content>
     <div id=user_profile>
@@ -29,27 +29,31 @@
                 <br>
                 <div id=records>
                         <table>
-                                <tr>
-                                  <th>Red flags raised</th>
-                                  <th>Interventions requested</th>
-                                </tr>
-                                <tr>
-                                  <td>Resolved</td>
-                                  <td>4</td>
-                                </tr>
-                                <tr>
-                                  <td>Under investigation</td>
-                                  <td>6</td>
-                                </tr>
-                                <tr>
-                                    <td>rejected</td>
-                                    <td>2</td>
-                                </tr>
+                                        <tr>
+                                                        <th></th>
+                                                        <th>Red flags raised</th>
+                                                        <th>Interventions requested</th>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>Resolved</td>
+                                                        <td>4</td>
+                                                        <td>5</td>
+                                                      </tr>
+                                                      <tr>
+                                                        <td>Under investigation</td>
+                                                        <td>6</td>
+                                                        <td>5</td>
+                                                      </tr>
+                                                      <tr>
+                                                          <td>rejected</td>
+                                                          <td>2</td>
+                                                          <td>4</td>
+                                                      </tr>
                         </table>
                 </div>
                 <br>
                 <form action="/action_page.php">
-                    <label for="redflag">Raise red Flag</label>
+                    <label for="redflag" style="color:red">Raise red Flag</label>
                     <input type="text" id="redflag" name="Redflag" placeholder="Register your issue...">
                     
                     <label for="red_Flag_pic">Upload image:</label>
@@ -58,18 +62,17 @@
                     <label for="red_flag_video">Upload video:</label>
                     <input type="file" name="video" accept="video/*">
 
-                    <p>Click the button to add your coordinates.</p>
-
-                    <button id="geoLocation">Add location</button>
-
-                    <p id="user_location"></p>
+                    <label for="location">Click below to add your coordinates.</label>
+                    <br>
+                    <input type="text" name="location" id="add_location" placeholder="click me!">
 
                     <input type="submit" value="submit">
 
                 </form>
+                <br>
                 <form>
 
-                    <label for="intervention">Request ntervention</label>
+                    <label for="intervention" style="color:red">Request intervention</label>
                     <input type="text" id="intervention" name="intervention">
                 
                     <label for="intervention_pic">Upload image:</label>
@@ -78,13 +81,18 @@
                     <label for="intervention_video">Upload video:</label>
                     <input type="file" name="video" accept="video/*">
 
+                    <label for="location">Click below to add your coordinates.</label>
+                    <br>
+                    <input type="text" name="location" id="add_location2" placeholder="click me!">
+
                     <input type="submit" value="submit">
                 </form>
     </div>
     <div id="past_records">
         <div id="pending_statuses">
                 <div id="individual_record">
-                        <div class="record_type">Red Flag:</div>
+                        <div class="record_type">Red Flag</div>
+                        <div class="location_stamp">location: x,y</div>
                         <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                         Donec lacinia ligula eget velit tincidunt, in porttitor enim pharetra. 
                         Vivamus a nisl mattis dui placerat efficitur a id lacus. Cras felis diam, 
@@ -105,7 +113,8 @@
         
         <div id="statuses_known">
                 <div id="individual_record">
-                        <div class="record_type">Red Flag:</div>
+                        <div class="record_type">Red Flag</div>
+                        <div class="location_stamp">location: x,y</div>
                         <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                         Donec lacinia ligula eget velit tincidunt, in porttitor enim pharetra. 
                         Vivamus a nisl mattis dui placerat efficitur a id lacus. Cras felis diam, 
@@ -121,7 +130,8 @@
         
                 </div>
                 <div id="individual_record">
-                        <div class="record_type">Intervention:</div>
+                        <div class="record_type">Intervention</div>
+                        <div class="location_stamp">location: x,y</div>
                         <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                         Donec lacinia ligula eget velit tincidunt, in porttitor enim pharetra. 
                         Vivamus a nisl mattis dui placerat efficitur a id lacus. Cras felis diam, 
@@ -137,7 +147,8 @@
         
                 </div>
                 <div id="individual_record">
-                        <div class="record_type">Intervention:</div>
+                        <div class="record_type">Intervention</div>
+                        <div class="location_stamp">location: x,y</div>
                         <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                         Donec lacinia ligula eget velit tincidunt, in porttitor enim pharetra. 
                         Vivamus a nisl mattis dui placerat efficitur a id lacus. Cras felis diam, 
