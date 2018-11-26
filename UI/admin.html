@@ -52,7 +52,7 @@
           </table>
         </div>
         <br>
-        <form action="/action_page.php">
+        <form id="sign">
           <label for="redflag" style="color:red">Raise red Flag</label>
           <input type="text" id="redflag" name="Redflag" placeholder="Register your issue...">
                     
@@ -70,7 +70,7 @@
 
         </form>
         <br>
-        <form>
+        <form id="sign">
           <label for="intervention" style="color:red">Request intervention</label>
           <input type="text" id="intervention" name="intervention">
                 
@@ -173,31 +173,28 @@
           <button class="record_btn"><i class="fa fa-trash"></i>Delete</button>
         </div>
 
-                <div id="individual_record">
-                        <div class="record_type">Red Flag</div>
-                        <div class="location_stamp">location: x,y</div>
-                        <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Donec lacinia ligula eget velit tincidunt, in porttitor enim pharetra. 
-                        Vivamus a nisl mattis dui placerat efficitur a id lacus. Cras felis diam, 
-                        tristique a neque vitae, feugiat vulputate mi. Vivamus ullamcorper justo 
-                        lorem, eget euismod dui ornare vitae. Vestibulum sit amet maximus magna. 
-                        Morbi ultrices elit eu velit tristique efficitur. Maecenas vitae ornare 
-                        elit, sit amet blandit metus. Sed felis nibh, porttitor a augue non, 
-                        placerat gravida orci. Nam hendrerit vel magna eget faucibus. 
-                        </p>
-                        <div class="intervention_label">status:</div>
-                        <div id=intervention_status>rejected</div>
-                        <button class="record_btn">Edit status</button>
-                        <button class="record_btn"><i class="fa fa-trash"></i>Delete</button>
-                        
-        
-        
-                </div>
+        <div id="individual_record">
+          <div class="record_type">Red Flag</div>
+          <div class="location_stamp">location: x,y</div>
+          <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Donec lacinia ligula eget velit tincidunt, in porttitor enim pharetra. 
+          Vivamus a nisl mattis dui placerat efficitur a id lacus. Cras felis diam, 
+          tristique a neque vitae, feugiat vulputate mi. Vivamus ullamcorper justo 
+          lorem, eget euismod dui ornare vitae. Vestibulum sit amet maximus magna. 
+          Morbi ultrices elit eu velit tristique efficitur. Maecenas vitae ornare 
+          elit, sit amet blandit metus. Sed felis nibh, porttitor a augue non, 
+          placerat gravida orci. Nam hendrerit vel magna eget faucibus. 
+          </p>
+          <div class="intervention_label">status:</div>
+          <div id=intervention_status>rejected</div>
+          <button class="record_btn">Edit status</button>
+          <button class="record_btn"><i class="fa fa-trash"></i>Delete</button>
         </div>
+      </div>
         
     </div>
     
-</div>
-<script src="myapp.js"></script>
+  
+  <script src="myapp.js"></script>
 </body>
 </html>

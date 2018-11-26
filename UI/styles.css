@@ -99,8 +99,8 @@ input[type=submit]:hover {
     width: 100%;
     border-radius: 5px;
     padding: 20px;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 450px;
+    margin-right: 450px;
 }
 
 #user_profile {
@@ -250,7 +250,23 @@ th, td {
     text-align: center;
     color: white;
  }
+ #sign {
+     border: 0px;
+ }
 
+ #choose {
+     display: flex;
+     flex-wrap: wrap;
+     padding: 5px;
+ }
+
+ .container {
+     margin: 12px;
+     width: 40%;
+     border: solid #ccc 1px;
+     padding: 5px;
+     text-align: center;
+ }
 @media screen and (max-width: 600px){
     ul.navbar li.right, 
     ul.navbar li {float: none;}
