@@ -1,0 +1,272 @@
+body {
+    margin: 0;
+    font-family: 'Trebuchet MS';
+    background-color: rgb(20, 18, 18);
+}
+
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(216, 43, 43);
+}
+
+ul.navbar li {float: left;}
+
+ul.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.navbar li a:hover:not(.active) {background-color: #111;}
+
+ul.navbar li a.active {background-color: #4CAF50;}
+
+ul.navbar li.right {float: right;}
+
+#main_content {
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+
+}
+    
+.container1 {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 150px;
+    margin-right: 150px;
+    font-size: x-large;
+}
+
+.container2 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+   
+}
+
+.ourServicesTitle {
+    width: 100%;
+    
+}
+
+.ourServices {
+    width: calc((100% - 60px)/2);
+    margin-top: 20px;
+    border: solid black 0;
+    height: 200px;
+}
+
+.firstBox {
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: green;
+}
+
+#formContainer {
+    width: 100%;
+    border-radius: 5px;
+    padding: 20px;
+    margin-left: 450px;
+    margin-right: 450px;
+}
+
+#user_profile {
+    width: 30%;
+    border-radius: 5px;
+    padding: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.user_profile {
+    width: 100%;
+    padding: 12px 1px;
+    display: inline-block;
+    text-align: center;
+    
+}
+
+form {
+    border: solid 1px #ccc;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#past_records {
+    width: 70%;
+
+}
+
+#summary {
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#redFlagsRaised, #interventionsRequestedSummary, #resolvedIssues, #pendingIssues, #rejectedIssues {
+    width:15%;
+    border-right:solid #ccc 1px;
+    text-align: center;
+    padding: 5px;
+    padding-bottom: 15px;
+}
+
+#redflag, #intervention {
+    height: 100px;
+}
+
+#add_location, #add_location2 {
+    background-color: rgb(20, 18, 18);
+}
+
+#totalIssuesRaised {
+    width: 15%;
+    text-align: center;
+    padding: 5px;
+    padding-bottom: 15px;
+}
+
+#icon {
+    text-align: center;
+}
+
+#records {
+    display: flex;
+    flex-wrap: wrap;
+}
+#red_flags, #interventions_requested, #intervention_status {
+    width: 25%;
+    text-align: center;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+input[type=file] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#past_records {
+    width: 60%;
+    margin-top: 20px;
+}
+
+#individual_record {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.profile_label, .intervention_label, .record_type, .location_stamp {
+    width: 25%;
+    text-align: center;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.record_btn {
+    width: 23%;
+    background-color: rgb(20, 18, 18);
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Darker background on mouse-over */
+.record_btn:hover {
+    background-color: rgb(216, 43, 43);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: rgb(20, 18, 18);
+    color: white;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+#records{
+    overflow-x: auto;
+}
+
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+ }
+ #sign, #signUp {
+     border: 0px;
+ }
+
+ #choose {
+     display: flex;
+     flex-wrap: wrap;
+     padding: 5px;
+ }
+
+ .container {
+     margin: 12px;
+     width: 40%;
+     border: solid #ccc 1px;
+     padding: 5px;
+     text-align: center;
+ }
+@media screen and (max-width: 600px){
+    ul.navbar li.right, 
+    ul.navbar li {float: none;}
+}

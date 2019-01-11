@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-compatible" content="ie=edge">
+    <title>iReporter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <ul class="navbar">
+        <li class="active"><a href="index.html">iReporter</a></li>
+        <li class="right"><a href="sign_up.html">Sign up</a></li>
+        <li class="right"><a href="sign_in.html">Sign in</a></li>
+    </ul>
+    
+    <div id=main_content>
+        <div id=formContainer>
+            <form action="profile.html" id="signUp">
+                <label for="firstname">First name</label>
+                <input type="text" id="firstname" name="firstname" placeholder="Your name..">
+
+                <label for="lastname">Last name</label>
+                <input type="text" id="lastname" name="lastname" placeholder="last name..">
+
+                <label for="othernames">Other names</label>
+                <input type="text" id="othernames" name="othernames" placeholder="other names..">
+                    
+                <label for="email">Email</label>
+                <input type="text" id="email" name="Email" placeholder="Your Email..">
+
+                <label for="phoneNumber">Phone number</label>
+                <input type="text" id="phonenumber" name="phonenumber" placeholder="Your phoneNumber..">
+
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="username..">
+
+                <label for="password">Password</label>
+                <input type="text" id="password" name="Password">
+
+                <label for="confirmPassword">Confirm password</label>
+                <input type="text" id="confirmPassword" name="confirmPassword">
+                    
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                    <option value="Kenya">Kenya</option>
+                    <option value="Uganda">Uganda</option>
+                    <option value="Tanzania">Tanzania</option>
+                </select>
+
+                <input type="submit" value="submit">
+                      
+            </form>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>iReporter@gmail.com :::: +254 717245777</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
