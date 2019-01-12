@@ -35,6 +35,8 @@ function signUpUser(event){
             .then((data) => {
                 if(data.status === 201){
                     console.log(data)
+                    sessionStorage.setItem('username', username);
+                    sessionStorage.setItem('email', email);
                     window.location.replace('profile.html')
                 }else{
                     console.log(data)
