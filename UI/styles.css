@@ -249,7 +249,7 @@ th, td {
     text-align: center;
     color: white;
  }
- #signUp, #signIn {
+ #signUp, #signIn, #redFlagForm, #incidentForm {
      border: 0px;
  }
 
