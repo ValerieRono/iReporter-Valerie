@@ -35,8 +35,10 @@ function signUpUser(event){
             .then((data) => {
                 if(data.status === 201){
                     console.log(data)
+                    window.location.replace('profile.html')
                 }else{
                     console.log(data)
+                    window.alert(JSON.stringify(data['message']))
                 }
             })
     
