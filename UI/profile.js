@@ -51,8 +51,8 @@ function addLocation() {
 }
 
 function showPosition(position) {
-    redFlag.value = "Latitude: " + position.coords.latitude + 
-    " Longitude: " + position.coords.longitude;
+    redFlag.value = "Latitude: " + position.coords.latitude +
+    ", Longitude: " + position.coords.longitude;
 }
 
 redFlag.addEventListener("click", addLocation, false);
@@ -68,8 +68,8 @@ function addLocation2() {
 }
 
 function showPosition2(position) {
-    intervention.value = "Latitude: " + position.coords.latitude + 
-    " Longitude: " + position.coords.longitude;
+    intervention.value = "Latitude: " + position.coords.latitude +
+    ", Longitude: " + position.coords.longitude;
 }
 
 intervention.addEventListener("click", addLocation2, false);
