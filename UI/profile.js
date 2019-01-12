@@ -37,8 +37,6 @@ function populateProfilePage(event){
 
 }
 
-
-
 var redFlag = document.getElementById("add_location");
 var intervention = document.getElementById("add_location2");
 
@@ -51,8 +49,8 @@ function addLocation() {
 }
 
 function showPosition(position) {
-    redFlag.value = "Latitude: " + position.coords.latitude +
-    ", Longitude: " + position.coords.longitude;
+    redFlag.value = position.coords.latitude +
+    ", " + position.coords.longitude;
 }
 
 redFlag.addEventListener("click", addLocation, false);
@@ -68,8 +66,8 @@ function addLocation2() {
 }
 
 function showPosition2(position) {
-    intervention.value = "Latitude: " + position.coords.latitude +
-    ", Longitude: " + position.coords.longitude;
+    intervention.value = position.coords.latitude +
+    ", " + position.coords.longitude;
 }
 
 intervention.addEventListener("click", addLocation2, false);
