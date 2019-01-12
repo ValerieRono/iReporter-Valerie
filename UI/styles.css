@@ -110,7 +110,7 @@ input[type=submit]:hover {
     margin-right: 10px;
 }
 
-.user_profile {
+#user_name, #user_email, #user_country {
     width: 100%;
     padding: 12px 1px;
     display: inline-block;
@@ -249,7 +249,7 @@ th, td {
     text-align: center;
     color: white;
  }
- #sign, #signUp {
+ #sign, #signUp, #logIn {
      border: 0px;
  }
 
