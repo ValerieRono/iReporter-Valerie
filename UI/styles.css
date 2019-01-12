@@ -111,7 +111,7 @@ input[type=submit]:hover {
     margin-right: 10px;
 }
 
-.user_profile {
+#user_name {
     width: 100%;
     padding: 12px 1px;
     display: inline-block;
@@ -250,7 +250,7 @@ th, td {
     text-align: center;
     color: white;
  }
- #sign {
+ #signUp, #signIn {
      border: 0px;
  }
 
