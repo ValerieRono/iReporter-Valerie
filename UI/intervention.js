@@ -3,11 +3,8 @@ document.getElementById('incidentForm').addEventListener('submit', createInterve
 
 let location2 = document.getElementById('add_location2').value;
 let images2 = document.getElementById('imagesIntervention').value;
-let videos2 = document.getElementById('videosIntervetion').value;
+let videos2 = document.getElementById('videosIntervention').value;
 let comment2 = document.getElementById('intervention').value;
-
-let token = sessionStorage.getItem('token') 
-let bearer = 'Bearer '+ token;
     
 function createIntervention(event){
     event.preventDefault();

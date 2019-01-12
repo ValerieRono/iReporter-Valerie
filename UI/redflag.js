@@ -1,13 +1,10 @@
 // create incident fetch method
 document.getElementById('redFlagForm').addEventListener('submit', createRedflag)
 
-let location = document.getElementById('add_location').value;
+let place = document.getElementById('add_location').value;
 let images = document.getElementById('images').value;
 let videos = document.getElementById('videos').value;
 let comment = document.getElementById('redflag').value;
-
-let token = sessionStorage.getItem('token') 
-let bearer = 'Bearer '+ token;
     
 function createRedflag(event){
     event.preventDefault();
@@ -23,7 +20,7 @@ function createRedflag(event){
                 },
                 body: JSON.stringify({
                     type_of_incident: "Redflag",
-	                location: location,
+	                location: place,
 	                images: images,
 	                videos: videos,
                     comment: comment
