@@ -35,7 +35,6 @@ ul.navbar li.right {float: right;}
 
 }
     
-
 .container1 {
     width: 100%;
     text-align: center;
@@ -250,7 +249,7 @@ th, td {
     text-align: center;
     color: white;
  }
- #sign {
+ #sign, #signUp {
      border: 0px;
  }
 
