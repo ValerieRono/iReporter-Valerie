@@ -1,5 +1,5 @@
 // populate user profile page upon successful log in
-document.getElementById('logIn').addEventListener('submit', logInUser)
+document.getElementById('signIn').addEventListener('submit', logInUser)
 
 function logInUser(event){
     event.preventDefault();
@@ -21,13 +21,19 @@ function logInUser(event){
             })
             .then((response) => response.json())
             .then((data) => {
-                if(data.status === 200){
-                    console.log(data)
-                    window.location.replace('profile.html')
-                }else{
-                    console.log(data)
-                    window.alert(JSON.stringify(data['message']))
-                }
+                // console.log(data['access_token'])
+                let token = data['access_token']
+                sessionStorage.setItem('username', username)
+                sessionStorage.setItem('token', token)
+                window.location.replace('profile.html')
+                // if(data.status === 200){
+                //     console.log(data)
+                //     sessionStorage.setItem('username', username)
+                //     window.location.replace('profile.html')
+                // }else{
+                //     console.log(data)
+                //     window.alert(JSON.stringify(data['message']))
+                // }
             })
     
         
