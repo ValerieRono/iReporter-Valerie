@@ -29,12 +29,13 @@ function populateProfilePage(event){
                 data['data'][0]['incidents'].forEach(function(post){
                     incidents += 
                     `<div id="individual_record">
+                     <div class="record_id">${post.id}</div>
                      <div class="record_type">${post.type_of_incident}</div>
                      <div class="location_stamp">location: ${post.location}</div>
                      <div class="intervention_label">status: ${post.status}</div>
                      <div class="comment"><p>comment:<br>${post.comment}</p></div>
-                     <button class="record_btn">Edit</button>
-                     <button class="record_btn"><i class="fa fa-trash"></i>Delete</button> 
+                     <button class="edit_record_btn">Edit</button>
+                     <button class="delete_record_btn"><i class="fa fa-trash"></i>Delete</button> 
                      </div>
                      `
                 });

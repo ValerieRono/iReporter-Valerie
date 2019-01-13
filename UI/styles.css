@@ -212,7 +212,7 @@ input[type=file] {
     box-sizing: border-box;
 }
 
-.record_btn {
+.edit_record_btn, .delete_record_btn {
     width: 23%;
     background-color: rgb(20, 18, 18);
     color: white;
@@ -223,7 +223,7 @@ input[type=file] {
 }
 
 /* Darker background on mouse-over */
-.record_btn:hover {
+.edit_record_btn:hover, .delete_record_btn:hover {
     background-color: rgb(216, 43, 43);
 }
 
