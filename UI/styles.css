@@ -190,6 +190,9 @@ input[type=file] {
     margin-top: 20px;
 }
 
+.comment {
+    margin-left: 60px;
+}
 #individual_record {
     width: 100%;
     padding: 12px 20px;
