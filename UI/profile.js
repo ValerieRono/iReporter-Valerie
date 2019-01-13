@@ -1,7 +1,7 @@
 let username = document.getElementById('user_name');
 username.innerText = sessionStorage.getItem('username');
 
-sessionStorage.removeItem('username');
+// sessionStorage.removeItem('username');
 
 let token = sessionStorage.getItem('token') 
 let bearer = 'Bearer '+ token;
@@ -24,7 +24,21 @@ function populateProfilePage(event){
             })
             .then((response) => response.json())
             .then((data) => {
-                console.log(data)
+                console.log(data['data'][0]['incidents'])
+                let incidents = '<h2>INCIDENTS</h2>';
+                data['data'][0]['incidents'].forEach(function(post){
+                    incidents += 
+                    `<div id="individual_record">
+                     <div class="record_type">${post.type_of_incident}</div>
+                     <div class="location_stamp">location: ${post.location}</div>
+                     <div class="intervention_label">status: ${post.status}</div>
+                     <div class="comment"><p>comment:<br>${post.comment}</p></div>
+                     <button class="record_btn">Edit</button>
+                     <button class="record_btn"><i class="fa fa-trash"></i>Delete</button> 
+                     </div>
+                     `
+                });
+                document.getElementById('past_records').innerHTML = incidents;
                 // window.location.replace('profile.html')
                 // if(data.status === 201){
                 //     console.log(data)
@@ -36,8 +50,6 @@ function populateProfilePage(event){
             })
 
 }
-
-
 
 var redFlag = document.getElementById("add_location");
 var intervention = document.getElementById("add_location2");
@@ -51,8 +63,8 @@ function addLocation() {
 }
 
 function showPosition(position) {
-    redFlag.value = "Latitude: " + position.coords.latitude +
-    ", Longitude: " + position.coords.longitude;
+    redFlag.value = position.coords.latitude +
+    ", " + position.coords.longitude;
 }
 
 redFlag.addEventListener("click", addLocation, false);
@@ -68,8 +80,8 @@ function addLocation2() {
 }
 
 function showPosition2(position) {
-    intervention.value = "Latitude: " + position.coords.latitude +
-    ", Longitude: " + position.coords.longitude;
+    intervention.value = position.coords.latitude +
+    ", " + position.coords.longitude;
 }
 
 intervention.addEventListener("click", addLocation2, false);
