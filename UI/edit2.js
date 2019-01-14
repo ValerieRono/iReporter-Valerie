@@ -48,3 +48,20 @@ function editFields(event){
                 // }
             })
 }
+
+function addLocation3() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        editLocation.value = "Geolocation is not supported by this browser.";
+    }
+}
+    
+function showPosition(position) {
+    editLocation.value = position.coords.latitude +
+        ", " + position.coords.longitude;
+}
+
+let editLocation = document.getElementById('add_location3');
+    
+editLocation.addEventListener("click", addLocation3, false);
