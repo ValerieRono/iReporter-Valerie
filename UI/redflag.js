@@ -1,13 +1,15 @@
 // create incident fetch method
 document.getElementById('redFlagForm').addEventListener('submit', createRedflag)
 
-let place = document.getElementById('add_location').value;
-let images = document.getElementById('images').value;
-let videos = document.getElementById('videos').value;
-let comment = document.getElementById('redflag').value;
+
     
 function createRedflag(event){
     event.preventDefault();
+
+    let place = document.getElementById('add_location').value;
+    let images = document.getElementById('images').value;
+    let videos = document.getElementById('videos').value;
+    let comment = document.getElementById('redflag').value;
 
     fetch('https://ireporter-valerie.herokuapp.com/api/v2/incidents', {
                 method: 'POST',
