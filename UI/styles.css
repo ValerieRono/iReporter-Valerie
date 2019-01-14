@@ -252,7 +252,7 @@ th, td {
     text-align: center;
     color: white;
  }
- #signUp, #signIn, #redFlagForm, #incidentForm {
+ #signUp, #signIn, #redFlagForm, #incidentForm, #editForm {
      border: 0px;
  }
 

@@ -6,7 +6,7 @@ records.addEventListener("click", function(event) {
 	// If it was a button
 	if (event.target.className != 'delete_record_btn') return;
 
-    let button = event.target.closest('.individual_record');
+    //let button = event.target.closest('.individual_record');
    
     
     // button found!  retrieve the ID and use it
