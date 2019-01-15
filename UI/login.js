@@ -1,3 +1,10 @@
+// var jwtDecode = require('jwt-decode');
+// and import via
+// import * as JWT from 'jwt-decode';
+
+// use JWT() for decode. Not jwt-decode() !!
+// let t = JWT(token);
+
 // populate user profile page upon successful log in
 document.getElementById('signIn').addEventListener('submit', logInUser)
 
@@ -23,9 +30,24 @@ function logInUser(event){
             .then((data) => {
                 // console.log(data['access_token'])
                 let token = data['access_token']
+                let payload =jwt_decode(token)
+                let user = payload['user']
+                
+                console.log(user)
                 sessionStorage.setItem('username', username)
                 sessionStorage.setItem('token', token)
-                window.location.replace('profile.html')
+                sessionStorage.setItem('isAdmin', user['is_admin'])
+                
+                if ( user['is_admin']) {
+                    window.location.replace('admin.html')
+                } else {
+                    window.location.replace('profile.html')
+                }
+                //window.location.replace('profile.html')
+
+
+
+                
                 // if(data.status === 200){
                 //     console.log(data)
                 //     sessionStorage.setItem('username', username)
