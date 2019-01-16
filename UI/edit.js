@@ -20,21 +20,21 @@ incidents.addEventListener("click", function(event) {
             })
             .then((response) => response.json())
             .then((data) => {
-
-                let post = data['data'][0]['incidents']
-                sessionStorage.setItem('location', post.location)
-                sessionStorage.setItem('comment', post.comment)
-                sessionStorage.setItem('id', post.id)
-                sessionStorage.setItem('status', post.status)
+                console.log(data)
+                // let post = data['data'][0]['incidents']
+                // sessionStorage.setItem('location', post.location)
+                // sessionStorage.setItem('comment', post.comment)
+                // sessionStorage.setItem('id', post.id)
+                // sessionStorage.setItem('status', post.status)
 
             })
-    let isAdmin = sessionStorage.getItem('isAdmin');
-    // console.log(isAdmin)
-    if ( isAdmin == "true") {
-        window.location.replace('editAdmin.html')
-    } else {
-        window.location.replace('edit.html')
-    }
+    // let isAdmin = sessionStorage.getItem('isAdmin');
+    // // console.log(isAdmin)
+    // if ( isAdmin == "true") {
+    //     window.location.replace('editAdmin.html')
+    // } else {
+    //     window.location.replace('edit.html')
+    // }
     
 })
 
