@@ -34,9 +34,9 @@ function logInUser(event){
                 let user = payload['user']
                 
                 console.log(user)
-                sessionStorage.setItem('username', username)
-                sessionStorage.setItem('token', token)
-                sessionStorage.setItem('isAdmin', user['is_admin'])
+                localStorage.setItem('username', username)
+                localStorage.setItem('token', token)
+                localStorage.setItem('isAdmin', user['is_admin'])
                 
                 if ( user['is_admin']) {
                     window.location.replace('admin.html')
@@ -50,7 +50,7 @@ function logInUser(event){
                 
                 // if(data.status === 200){
                 //     console.log(data)
-                //     sessionStorage.setItem('username', username)
+                //     localStorage.setItem('username', username)
                 //     window.location.replace('profile.html')
                 // }else{
                 //     console.log(data)
