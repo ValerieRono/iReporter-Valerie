@@ -5,11 +5,13 @@ let editForm = document.getElementById('editForm')
 function populateEditFields(event){
     event.preventDefault();
 
-    let location = document.getElementById('add_location3');
-    let comment = document.getElementById('redflag');
+    let location = document.getElementById('location');
+    let comment = document.getElementById('comment');
+    let status = document.getElementById('status');
 
-    location.placeholder = sessionStorage.getItem('location');
-    comment.placeholder = sessionStorage.getItem('comment');
+    location.innerText = sessionStorage.getItem('location');
+    comment.innerText = sessionStorage.getItem('comment');
+    status.placeholder = sessionStorage.getItem('status');
     
 }
 
@@ -22,12 +24,10 @@ function editFields(event){
     let token = sessionStorage.getItem('token') 
     let bearer = 'Bearer '+ token;
 
-    let locationValue = document.getElementById('add_location3').value;
-    let commentValue = document.getElementById('redflag').value;
-    
+    let statusValue = document.getElementById('status').value;
 
     fetch(`https://ireporter-valerie.herokuapp.com/api/v2/incidents/${id}`, {
-                method: 'PUT',
+                method: 'PATCH',
                 headers: {
                     'Authorization': bearer,
                     'Accept':'application/json',
@@ -35,8 +35,7 @@ function editFields(event){
                     'mode':'cors'
                 },
                 body: JSON.stringify({
-                    location: locationValue,
-                    comment: commentValue,
+                    status: statusValue
                 })
             })
             .then((response) => response.json())
@@ -50,20 +49,3 @@ function editFields(event){
                 // }
             })
 }
-
-function addLocation3() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else { 
-        editLocation.value = "Geolocation is not supported by this browser.";
-    }
-}
-    
-function showPosition(position) {
-    editLocation.value = position.coords.latitude +
-        ", " + position.coords.longitude;
-}
-
-let editLocation = document.getElementById('add_location3');
-    
-editLocation.addEventListener("click", addLocation3, false);

@@ -16,19 +16,21 @@
     
     <div id=main_content>
         <div id=formContainer>
-            <form id="editForm">
-                <label for="editRecord" style="color:red">Edit record</label>
-                <br>
-                
-                <label for="location">Click below to add your coordinates.</label>
-                <br>
-                <input type="text" name="location" id="add_location3" placeholder="click me!">
-                
-                <label for="red_flag_comment">Comment:</label>
-                <input type="text" id="redflag" name="Redflag" placeholder="Register your issue...">
-                
+            <label for="editRecord" style="color:red">Edit status</label>
+            <br>
+            <div>
+                <h2>location:</h2>
+                <p id="location"></p>
+            </div>
+            <div>
+                <h2>Comment:</h2>
+                <p id="comment"></p>
+            </div>
+            <label for="status">Status:</label>
+            <input type="text" id="status" name="Status" placeholder="Status..">
+            <form id="editForm">                  
                 <input type="submit" value="submit">
-                </form>
+            </form>
         </div>
     </div>
     
@@ -36,6 +38,6 @@
         <p>iReporter@gmail.com :::: +254 717245777</p>
     </div>
 
-    <script src="edit2.js"></script>
+    <script src="edit2Admin.js"></script>
 </body>
 </html>
