@@ -22,13 +22,13 @@ incidents.addEventListener("click", function(event) {
             .then((data) => {
                 
                 let post = data['data'][0]['incidents']
-                sessionStorage.setItem('location', post.location)
-                sessionStorage.setItem('comment', post.comment)
-                sessionStorage.setItem('id', post.id)
-                sessionStorage.setItem('status', post.status)
+                localStorage.setItem('location', post.location)
+                localStorage.setItem('comment', post.comment)
+                localStorage.setItem('id', post.id)
+                localStorage.setItem('status', post.status)
 
             })
-    let isAdmin = sessionStorage.getItem('isAdmin');
+    let isAdmin = localStorage.getItem('isAdmin');
     // console.log(isAdmin)
     if ( isAdmin == "true") {
         window.location.replace('editAdmin.html')

@@ -35,7 +35,7 @@ function signUpUser(event){
             .then((data) => {
                 if(data.status === 201){
                     console.log(data)
-                    sessionStorage.setItem('username', username)
+                    localStorage.setItem('username', username)
                     window.location.replace('profile.html')
                 }else{
                     console.log(data)

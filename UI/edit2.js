@@ -7,9 +7,9 @@ function populateEditFields(event){
 
     let location = document.getElementById('add_location3');
     let comment = document.getElementById('redflag');
-
-    location.placeholder = sessionStorage.getItem('location');
-    comment.placeholder = sessionStorage.getItem('comment');
+   
+    location.placeholder = localStorage.getItem('location');
+    comment.placeholder = localStorage.getItem('comment');
     
 }
 
@@ -18,8 +18,8 @@ editForm.addEventListener('submit', editFields);
 function editFields(event){
     event.preventDefault();
 
-    let id = sessionStorage.getItem('id')
-    let token = sessionStorage.getItem('token') 
+    let id = localStorage.getItem('id')
+    let token = localStorage.getItem('token') 
     let bearer = 'Bearer '+ token;
 
     let locationValue = document.getElementById('add_location3').value;

@@ -1,9 +1,9 @@
 let username = document.getElementById('user_name');
-username.innerText = sessionStorage.getItem('username');
+username.innerText = localStorage.getItem('username');
 
-// sessionStorage.removeItem('username');
+// localStorage.removeItem('username');
 
-let token = sessionStorage.getItem('token') 
+let token = localStorage.getItem('token') 
 let bearer = 'Bearer '+ token;
 
 // populate user profile page whenever the page loads

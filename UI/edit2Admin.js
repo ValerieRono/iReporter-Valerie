@@ -9,9 +9,9 @@ function populateEditFields(event){
     let comment = document.getElementById('comment');
     let status = document.getElementById('status');
 
-    location.innerText = sessionStorage.getItem('location');
-    comment.innerText = sessionStorage.getItem('comment');
-    status.placeholder = sessionStorage.getItem('status');
+    location.innerText = localStorage.getItem('location');
+    comment.innerText = localStorage.getItem('comment');
+    status.placeholder = localStorage.getItem('status');
     
 }
 
@@ -20,8 +20,8 @@ editForm.addEventListener('submit', editFields);
 function editFields(event){
     event.preventDefault();
 
-    let id = sessionStorage.getItem('id')
-    let token = sessionStorage.getItem('token') 
+    let id = localStorage.getItem('id')
+    let token = localStorage.getItem('token') 
     let bearer = 'Bearer '+ token;
 
     let statusValue = document.getElementById('status').value;
