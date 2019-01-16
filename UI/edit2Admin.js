@@ -1,6 +1,9 @@
 window.addEventListener("load", populateEditFields);
 
 let editForm = document.getElementById('editForm')
+let id = localStorage.getItem('id')
+let token = localStorage.getItem('token') 
+let bearer = 'Bearer '+ token;
 
 function populateEditFields(event){
     event.preventDefault();
@@ -9,9 +12,22 @@ function populateEditFields(event){
     let comment = document.getElementById('comment');
     let status = document.getElementById('status');
 
-    location.innerText = localStorage.getItem('location');
-    comment.innerText = localStorage.getItem('comment');
-    status.placeholder = localStorage.getItem('status');
+    fetch(`https://ireporter-valerie.herokuapp.com/api/v2/incidents/${id}`, {
+        method: 'GET',
+        headers: {
+            'Authorization': bearer,
+            'Accept':'application/json',
+            'Content-Type': 'application/json',
+            'mode':'cors'
+        }
+    })
+        .then((response) => response.json())
+        .then((data) => {
+            let post = data['data'][0]['incidents']
+            location.innerText = post.location
+            comment.innerText = post.comment
+            status.placeholder = post.status
+        })
     
 }
 
@@ -19,10 +35,6 @@ editForm.addEventListener('submit', editFields);
 
 function editFields(event){
     event.preventDefault();
-
-    let id = localStorage.getItem('id')
-    let token = localStorage.getItem('token') 
-    let bearer = 'Bearer '+ token;
 
     let statusValue = document.getElementById('status').value;
 
@@ -41,11 +53,5 @@ function editFields(event){
             .then((response) => response.json())
             .then((data) => {
                 console.log(data)
-                // if(data.status === 201){
-                //     console.log(data)
-                // }else{
-                //     console.log(data)
-                //     window.alert(JSON.stringify(data['message']))
-                // }
             })
 }
