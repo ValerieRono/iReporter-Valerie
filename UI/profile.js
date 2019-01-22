@@ -1,8 +1,6 @@
 let username = document.getElementById('user_name');
 username.innerText = localStorage.getItem('username');
 
-// localStorage.removeItem('username');
-
 let token = localStorage.getItem('token') 
 let bearer = 'Bearer '+ token;
 
@@ -39,14 +37,6 @@ function populateProfilePage(event){
                      `
                 });
                 document.getElementById('past_records').innerHTML = incidents;
-                // window.location.replace('profile.html')
-                // if(data.status === 201){
-                //     console.log(data)
-                //     window.location.replace('profile.html')
-                // }else{
-                //     console.log(data)
-                //     window.alert(JSON.stringify(data['message']))
-                // }
             })
 
     

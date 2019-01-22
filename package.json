@@ -1,0 +1,24 @@
+{
+  "name": "iReporter-Valerie",
+  "version": "1.0.0",
+  "description": "PROJECT TITLE - iReporter",
+  "main": "index.js",
+  "dependencies": {
+    "puppeteer": "^1.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ValerieRono/iReporter-Valerie.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ValerieRono/iReporter-Valerie/issues"
+  },
+  "homepage": "https://github.com/ValerieRono/iReporter-Valerie#readme"
+}
