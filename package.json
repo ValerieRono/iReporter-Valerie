@@ -6,7 +6,9 @@
   "dependencies": {
     "puppeteer": "^1.11.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "faker": "^4.1.0"
+  },
   "scripts": {
     "test": "jest"
   },
