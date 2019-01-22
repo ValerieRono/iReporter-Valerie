@@ -41,7 +41,7 @@ let testUser = {
     othernames: "blahblah",
     email: "catechep@gmail.com",
     phoneNumber: "0717245777",
-    username: "chepkiru",
+    username: "chepkirrr",
     password: "chepkirui",
     confirmPassword: "chepkirui"
   };
