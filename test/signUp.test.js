@@ -1,4 +1,5 @@
 const puppeteer = require('puppeteer');
+const faker = require('faker');
 
 let browser, page;
 
@@ -35,13 +36,14 @@ test('sign up button leads to sign up page', async () => {
     await page.waitForSelector('#signUp')
 })
 
+
 let testUser = {
-    firstname: "Catherine",
-    lastname: "Chepkirui",
-    othernames: "blahblah",
-    email: "catechep@gmail.com",
+    firstname: faker.name.firstName(),
+    lastname: "chepkirui",
+    othernames: "cate",
+    email: "ronovalerie@gmail.com",
     phoneNumber: "0717245777",
-    username: "chepkirrr",
+    username: faker.name.lastName(),
     password: "chepkirui",
     confirmPassword: "chepkirui"
   };
