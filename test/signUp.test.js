@@ -43,7 +43,7 @@ let testUser = {
     othernames: "cate",
     email: "ronovalerie@gmail.com",
     phoneNumber: "0717245777",
-    username: faker.name.lastName(),
+    username: faker.name.firstName(),
     password: "chepkirui",
     confirmPassword: "chepkirui"
   };
