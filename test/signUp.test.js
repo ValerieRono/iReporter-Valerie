@@ -41,7 +41,7 @@ let testUser = {
     othernames: "blahblah",
     email: "catechep@gmail.com",
     phoneNumber: "0717245777",
-    username: "chepkirui",
+    username: "chepkiru",
     password: "chepkirui",
     confirmPassword: "chepkirui"
   };
@@ -76,5 +76,5 @@ let testUser = {
 
     await page.click("input[type=submit]");
     await page.waitForSelector("#past_records");
-    await page.screenshot({path: "something.png"})
+    await page.screenshot({path: "signUp.png"})
   });
