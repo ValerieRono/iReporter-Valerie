@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+  - "8.9.4"
+script:
+  - npm install
+  - npm install coveralls
+  # - npm run lint
+  - npm test -- -u --coverage
+after_success:
+  - coveralls < coverage/lcov.info
+branches:
+  only:
+  - gh-pages
+  - /.*/
+deploy:
+  provider: pages
+  skip-cleanup: false
+  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep-history: true
+  on:
+    branch: gh-pages

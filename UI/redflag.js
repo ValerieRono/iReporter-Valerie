@@ -1,7 +1,5 @@
 // create incident fetch method
 document.getElementById('redFlagForm').addEventListener('submit', createRedflag)
-
-
     
 function createRedflag(event){
     event.preventDefault();
