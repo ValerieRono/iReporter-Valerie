@@ -1,13 +1,13 @@
 // create incident fetch method
 document.getElementById('incidentForm').addEventListener('submit', createIntervention)
 
-let location2 = document.getElementById('add_location2').value;
-let images2 = document.getElementById('imagesIntervention').value;
-let videos2 = document.getElementById('videosIntervention').value;
-let comment2 = document.getElementById('intervention').value;
-    
 function createIntervention(event){
     event.preventDefault();
+
+    let location2 = document.getElementById('add_location2').value;
+    let images2 = document.getElementById('imagesIntervention').value;
+    let videos2 = document.getElementById('videosIntervention').value;
+    let comment2 = document.getElementById('intervention').value;    
 
     fetch('https://ireporter-valerie.herokuapp.com/api/v2/incidents', {
                 method: 'POST',
@@ -29,12 +29,6 @@ function createIntervention(event){
             .then((response) => response.json())
             .then((data) => {
                 console.log(data)
-                // if(data.status === 201){
-                //     console.log(data)
-                // }else{
-                //     console.log(data)
-                //     window.alert(JSON.stringify(data['message']))
-                // }
             })
     
         

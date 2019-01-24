@@ -38,9 +38,6 @@ function populateProfilePage(event){
                 });
                 document.getElementById('past_records').innerHTML = incidents;
             })
-
-    
-
 }
 
 var redFlag = document.getElementById("add_location");
@@ -81,10 +78,11 @@ intervention.addEventListener("click", addLocation2, false);
 
 function handleFileSelect(event){
     var files = event.target.files;
-    // console.log(files)
     // loop through the FileList and render the images as thumbnails
     for (var i=0, f; f = files[i]; i++){
         var reader = new FileReader();
+        
+        // img.src = URL.createObjectURL(this.files[0]);
 
         // capture file information
         reader.onload = (function(theFile){
@@ -100,8 +98,6 @@ function handleFileSelect(event){
         reader.readAsDataURL(f);
     }
 };
-
-
 
 document.getElementById('images').addEventListener('change', handleFileSelect, false);
 document.getElementById('videos').addEventListener('change', handleFileSelect, false);
