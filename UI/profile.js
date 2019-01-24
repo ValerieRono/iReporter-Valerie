@@ -77,3 +77,33 @@ function showPosition2(position) {
 }
 
 intervention.addEventListener("click", addLocation2, false);
+
+
+function handleFileSelect(event){
+    var files = event.target.files;
+    // console.log(files)
+    // loop through the FileList and render the images as thumbnails
+    for (var i=0, f; f = files[i]; i++){
+        var reader = new FileReader();
+
+        // capture file information
+        reader.onload = (function(theFile){
+            return function(e){
+                var span = document.createElement('span');
+                span.innerHTML = ['<img class="thumb" src="', e.target.result,
+                            '" title="', escape(theFile.name), '"/>'].join('');
+                var x = document.getElementById(event.target.id).nextElementSibling;
+                x.insertBefore(span, null);
+            }
+        })(f);
+
+        reader.readAsDataURL(f);
+    }
+};
+
+
+
+document.getElementById('images').addEventListener('change', handleFileSelect, false);
+document.getElementById('videos').addEventListener('change', handleFileSelect, false);
+document.getElementById('imagesIntervention').addEventListener('change', handleFileSelect, false);
+document.getElementById('videosIntervention').addEventListener('change', handleFileSelect, false);

@@ -2,7 +2,6 @@ const puppeteer = require('puppeteer');
 
 let browser, page;
 
-
 beforeEach(async () => {
     browser = await puppeteer.launch({
         headless: true
@@ -13,9 +12,7 @@ beforeEach(async () => {
 afterEach(async () => {
     await browser.close();
 });
-
-    
-    
+ 
 it ('should contain header', async() => {
     await page.goto('https://valerierono.github.io/iReporter-Valerie/UI/index.html');
     await page.waitFor('#main_content');

@@ -269,6 +269,13 @@ th, td {
      padding: 5px;
      text-align: center;
  }
+
+ .thumb {
+    height: 75px;
+    border: 1px solid #000;
+    margin: 10px 5px 0 0;
+  }
+  
 @media screen and (max-width: 600px){
     ul.navbar li.right, 
     ul.navbar li {float: none;}

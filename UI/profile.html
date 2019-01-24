@@ -57,10 +57,12 @@
         <input type="text" name="location" id="add_location" placeholder="click me!">
 
         <label for="red_Flag_pic">Upload image:</label>
-        <input type="file" id="images" name="pic" accept="image/*">
+        <input type="file" id="images" name="files[]" multiple accept="image/*">
+        <output id="listImages"></output><br>
 
         <label for="red_flag_video">Upload video:</label>
-        <input type="file" id="videos" name="video" accept="video/*">
+        <input type="file" id="videos" name="files[]" multiple accept="video/*">
+        <output id="listVideos"></output><br>
 
         <label for="red_flag_comment">Comment:</label>
         <input type="text" id="redflag" name="Redflag" placeholder="Register your issue...">
@@ -78,9 +80,11 @@
               
         <label for="intervention_pic">Upload image:</label>
         <input type="file" id="imagesIntervention"name="pic" accept="image/*">
+        <output id="listImagesIntervention"></output><br>
 
         <label for="intervention_video">Upload video:</label>
         <input type="file" id="videosIntervention" name="video" accept="video/*">
+        <output id="listVideosIntervention"></output><br>
 
         <label for="intervention_comment">Comment:</label>
         <input type="text" id="intervention" name="intervention" placeholder="Register your issue...">
