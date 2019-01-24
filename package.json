@@ -4,10 +4,12 @@
   "description": "PROJECT TITLE - iReporter",
   "main": "index.js",
   "dependencies": {
+    "npm": "^6.7.0",
     "puppeteer": "^1.11.0"
   },
   "devDependencies": {
-    "faker": "^4.1.0"
+    "faker": "^4.1.0",
+    "jest": "^23.6.0"
   },
   "scripts": {
     "test": "jest"
