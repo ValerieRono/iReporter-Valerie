@@ -4,10 +4,9 @@ node_js:
 script:
   - npm install
   - npm install coveralls
-  # - npm run lint
-  - npm test -- -u --coverage
-after_success:
-  - coveralls < coverage/lcov.info
+  - jest --coverage
+# after_success:
+#   - coveralls < coverage/lcov.info
 branches:
   only:
   - gh-pages
