@@ -74,7 +74,13 @@ function createIntervention(event){
             })
             .then((response) => response.json())
             .then((data) => {
-                console.log(data)
+                if(data.status === 201){
+                    console.log(data)
+                    window.alert(JSON.stringify(data['data'][0]['message']))
+                }else{
+                    console.log(data)
+                    window.alert(JSON.stringify(data['message']))
+                }
             })       
 }
 
