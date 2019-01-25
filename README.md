@@ -41,6 +41,7 @@ A user can:
     - Delete an incident.
 
 An admin user can:
+
     - Update status of a posted incident record
 
     - View all incidents posted
