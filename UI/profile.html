@@ -94,6 +94,21 @@
     </div>
     <div id="past_records"></div>
   
+  <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDjcF7bjCIP1rhVV3js7Nt2lTk_1F9GRjk",
+      authDomain: "ireporter-23399.firebaseapp.com",
+      databaseURL: "https://ireporter-23399.firebaseio.com",
+      projectId: "ireporter-23399",
+      storageBucket: "ireporter-23399.appspot.com",
+      messagingSenderId: "349402690017"
+    };
+    firebase.initializeApp(config);
+    const storageService = firebase.storage();
+    const storageRef = storageService.ref();
+  </script>
   <script src="profile.js"></script>
   <script src="redflag.js"></script>
   <script src="intervention.js"></script>
