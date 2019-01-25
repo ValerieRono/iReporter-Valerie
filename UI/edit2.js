@@ -35,6 +35,7 @@ function editFields(event){
     event.preventDefault();
 
     let locationValue = document.getElementById('add_location3').value;
+    console.log(locationValue);
     let commentValue = document.getElementById('redflag').value;
     
 
@@ -53,7 +54,16 @@ function editFields(event){
             })
             .then((response) => response.json())
             .then((data) => {
-                console.log(data)
+                if(data.status === 200){
+                    console.log(data)
+                    window.alert(JSON.stringify(data['data'][0]['message']))
+                    window.location.replace('profile.html')
+                } else {
+                    console.log(data)
+                    window.alert(JSON.stringify(data['message']))
+                    window.location.replace('profile.html')
+                }
+                
             })
 }
 
