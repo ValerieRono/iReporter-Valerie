@@ -29,34 +29,25 @@ function logInUser(event){
             .then((response) => response.json())
             .then((data) => {
                 // console.log(data['access_token'])
-                let token = data['access_token']
-                let payload =jwt_decode(token)
-                let user = payload['user']
-                
-                console.log(user)
-                localStorage.setItem('username', username)
-                localStorage.setItem('token', token)
-                localStorage.setItem('isAdmin', user['is_admin'])
-                
-                if ( user['is_admin']) {
-                    window.location.replace('admin.html')
-                } else {
-                    window.location.replace('profile.html')
+                if(data.status === 200){
+                    let token = data['access_token']
+                    let payload =jwt_decode(token)
+                    let user = payload['user']
+                    
+                    console.log(user)
+                    localStorage.setItem('username', username)
+                    localStorage.setItem('token', token)
+                    localStorage.setItem('isAdmin', user['is_admin'])
+                    
+                    if ( user['is_admin']) {
+                        window.location.replace('admin.html')
+                    } else {
+                        window.location.replace('profile.html')
+                    }
+                }else {
+                    console.log(data)
+                    window.alert(JSON.stringify(data['message']))
                 }
-                //window.location.replace('profile.html')
-
-
-
-                
-                // if(data.status === 200){
-                //     console.log(data)
-                //     localStorage.setItem('username', username)
-                //     window.location.replace('profile.html')
-                // }else{
-                //     console.log(data)
-                //     window.alert(JSON.stringify(data['message']))
-                // }
             })
-    
         
 }
