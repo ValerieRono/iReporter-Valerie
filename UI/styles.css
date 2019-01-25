@@ -275,6 +275,10 @@ th, td {
     border: 1px solid #000;
     margin: 10px 5px 0 0;
   }
+  .images, .videos {
+      width: 100px;
+      height: 100px;
+  }
   
 @media screen and (max-width: 600px){
     ul.navbar li.right, 
