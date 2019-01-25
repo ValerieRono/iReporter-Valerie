@@ -1,5 +1,5 @@
 # **IREPORTER** 
-[![Build Status](https://travis-ci.com/ValerieRono/iReporter-Valerie.svg?branch=gh-pages)](https://travis-ci.com/ValerieRono/iReporter-Valerie)
+[![Build Status](https://travis-ci.com/ValerieRono/iReporter-Valerie.svg?branch=gh-pages)](https://travis-ci.com/ValerieRono/iReporter-Valerie) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/66e44bf0892c44fe90292cbd7f234779)](https://www.codacy.com/app/ValerieRono/iReporter-Valerie?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ValerieRono/iReporter-Valerie&amp;utm_campaign=Badge_Grade)
 
 A web application that enables any/every citizen to bring any form of corruption to the notice of appropriate authorities and the general public. Users can also report on things that needs government intervention.
 
