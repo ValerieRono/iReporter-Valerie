@@ -7,9 +7,6 @@ records.addEventListener("click", function(event) {
 	if (event.target.className != 'delete_record_btn') return;
 
     //let button = event.target.closest('.individual_record');
-   
-    
-    // button found!  retrieve the ID and use it
     event.preventDefault();
 
     fetch(`https://ireporter-valerie.herokuapp.com/api/v2/incidents/${event.target.id}`, {
@@ -23,15 +20,14 @@ records.addEventListener("click", function(event) {
             })
             .then((response) => response.json())
             .then((data) => {
-                console.log(data)
-                // if(data.status === 201){
-                //     console.log(data)
-                // }else{
-                //     console.log(data)
-                //     window.alert(JSON.stringify(data['message']))
-                // }
+                if(data.status === 200){
+                    console.log(data)
+                    window.alert(JSON.stringify(data['data'][0]['message']))
+                    window.location.replace('profile.html')
+                }else{
+                    console.log(data)
+                    window.alert(JSON.stringify(data['message']))
+                }
             })
-
-    // button.remove();
 		
 })
