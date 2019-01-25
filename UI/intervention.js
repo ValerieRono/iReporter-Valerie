@@ -3,6 +3,7 @@ let user2 = document.getElementById('user_name').innerText;
 document.getElementById('incidentForm').addEventListener('submit', createIntervention)
 
 let files2;
+let img2Url, vid2Url;
 function handleFileSelect2(event){
     var files2 = event.target.files;
     // loop through the FileList and render the images as thumbnails
@@ -21,7 +22,7 @@ function handleFileSelect2(event){
                 x2.insertBefore(span, null);
                 console.log(theInterventionFile)
                 // create a child directory called images, and place the file inside this directory
-                const uploadTask2 = storageRef.child(`${user[i]}/${theInterventionFile.name}`).put(theInterventionFile); 
+                const uploadTask2 = storageRef.child(`${user}/${theInterventionFile.name}`).put(theInterventionFile); 
                 uploadTask2.on('state_changed', (snapshot) => {
                 // Observe state change events such as progress, pause, and resume
                 }, (error) => {
@@ -30,6 +31,13 @@ function handleFileSelect2(event){
                 }, () => {
                     // Do something once upload is complete
                     console.log('success');
+                    storageRef.child(`${user}/${theInterventionFile.name}`).getDownloadURL().then(function(url){
+                        if (event.target.id == 'imagesIntervention'){
+                            img2Url = url;
+                        } else if (event.target.id == 'videosIntervention'){
+                            vid2Url = url;
+                        }
+                    });
                 });
             }
         })(f);
@@ -45,8 +53,6 @@ function createIntervention(event){
     event.preventDefault();
 
     let location2 = document.getElementById('add_location2').value;
-    let images2 = document.getElementById('imagesIntervention').value;
-    let videos2 = document.getElementById('videosIntervention').value;
     let comment2 = document.getElementById('intervention').value;    
 
     fetch('https://ireporter-valerie.herokuapp.com/api/v2/incidents', {
@@ -61,8 +67,8 @@ function createIntervention(event){
                 body: JSON.stringify({
                     type_of_incident: "Intervention",
 	                location: location2,
-	                images: images2,
-	                videos: videos2,
+	                images: img2Url,
+	                videos: vid2Url,
                     comment: comment2
                 })
             })

@@ -1,15 +1,16 @@
 // create incident fetch method
 let user = document.getElementById('user_name').innerText;
+
 document.getElementById('redFlagForm').addEventListener('submit', createRedflag)
 
 let files;
+let imgUrl, vidUrl;
 function handleFileSelect(event){
     var files = event.target.files;
+
     // loop through the FileList and render the images as thumbnails
     for (var i=0, f; f = files[i]; i++){
         var reader = new FileReader();
-        
-        // img.src = URL.createObjectURL(this.files[0]);
 
         // capture file information
         reader.onload = (function(theFile){
@@ -20,16 +21,28 @@ function handleFileSelect(event){
                 var x = document.getElementById(event.target.id).nextElementSibling;
                 x.insertBefore(span, null);
                 console.log(theFile)
+
                 // create a child directory called images, and place the file inside this directory
-                const uploadTask = storageRef.child(`${user[i]}/${theFile.name}`).put(theFile); 
+                const uploadTask = storageRef.child(`${user}/${theFile.name}`).put(theFile); 
                 uploadTask.on('state_changed', (snapshot) => {
+
                 // Observe state change events such as progress, pause, and resume
                 }, (error) => {
+
                     // Handle unsuccessful uploads
                     console.log(error);
                 }, () => {
+
                     // Do something once upload is complete
                     console.log('success');
+                    storageRef.child(`${user}/${theFile.name}`).getDownloadURL().then(function(url){
+                        console.log(event.target.id)
+                        if (event.target.id == 'images'){
+                            imgUrl = url;
+                        } else if (event.target.id == 'videos'){
+                            vidUrl = url;
+                        }
+                    }); 
                 });
             }
         })(f);
@@ -47,9 +60,9 @@ function createRedflag(event){
     event.preventDefault();
 
     let place = document.getElementById('add_location').value;
-    let images = document.getElementById('images').value;
-    let videos = document.getElementById('videos').value;
     let comment = document.getElementById('redflag').value;
+
+   
 
     fetch('https://ireporter-valerie.herokuapp.com/api/v2/incidents', {
                 method: 'POST',
@@ -63,8 +76,8 @@ function createRedflag(event){
                 body: JSON.stringify({
                     type_of_incident: "Redflag",
 	                location: place,
-	                images: images,
-	                videos: videos,
+	                images: imgUrl,
+	                videos: vidUrl,
                     comment: comment
                 })
             })
