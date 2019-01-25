@@ -52,6 +52,14 @@ function editFields(event){
             })
             .then((response) => response.json())
             .then((data) => {
-                console.log(data)
+                if(data.status === 200){
+                    console.log(data)
+                    window.alert(JSON.stringify(data['data'][0]['message']))
+                    window.location.replace('admin.html')
+                } else {
+                    console.log(data)
+                    window.alert(JSON.stringify(data['message']))
+                    window.location.replace('admin.html')
+                }
             })
 }
