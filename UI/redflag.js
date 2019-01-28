@@ -86,6 +86,7 @@ function createRedflag(event){
                 if(data.status === 201){
                     console.log(data)
                     window.alert(JSON.stringify(data['data'][0]['message']))
+                    window.location.replace('profile.html')
                 }else{
                     console.log(data)
                     window.alert(JSON.stringify(data['message']))
