@@ -20,12 +20,25 @@
                 <label for="editRecord" style="color:red">Edit record</label>
                 <br>
                 
+                <div id="preview">
+                    <span class="thumb" id="previewImages"></span>
+                    <span class="thumb" id="previewVideos"></span>
+                </div>
+                
                 <label for="location">Click below to add your coordinates.</label>
                 <br>
                 <input type="text" name="location" id="add_location3" placeholder="click me!">
                 
                 <label for="red_flag_comment">Comment:</label>
                 <input type="text" id="redflag" name="Redflag" placeholder="Register your issue...">
+
+                <label for="red_Flag_pic">Upload image:</label>
+                <input type="file" id="images" name="files[]" multiple accept="image/*">
+                <output id="listImages"></output><br>
+
+                <label for="red_flag_video">Upload video:</label>
+                <input type="file" id="videos" name="files[]" multiple accept="video/*">
+                <output id="listVideos"></output><br>
                 
                 <input type="submit" value="submit">
                 </form>

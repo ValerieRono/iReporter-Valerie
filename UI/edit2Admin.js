@@ -10,6 +10,8 @@ function populateEditFields(event){
 
     let location = document.getElementById('location');
     let comment = document.getElementById('comment');
+    let images = document.getElementById('previewImages');
+    let videos = document.getElementById('previewVideos');
     let status = document.getElementById('status');
 
     fetch(`https://ireporter-valerie.herokuapp.com/api/v2/incidents/${id}`, {
@@ -26,6 +28,8 @@ function populateEditFields(event){
             let post = data['data'][0]['incidents']
             location.innerText = post.location
             comment.innerText = post.comment
+            images.innerHTML = `<img src=${post.images} class="images"/>`
+            videos.innerHTML = `<video src=${post.videos} class="videos"></video>`
             status.placeholder = post.status
         })
     
