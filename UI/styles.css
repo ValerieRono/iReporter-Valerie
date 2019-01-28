@@ -203,9 +203,9 @@ input[type=file] {
     box-sizing: border-box;
 }
 
-.profile_label, .intervention_label, .record_type, .location_stamp {
-    width: 25%;
-    text-align: center;
+.profile_label, .intervention_label, .record_type, .location_stamp, .comment, .files, .buttons {
+    width: 100%;
+    text-align: left;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -213,7 +213,7 @@ input[type=file] {
 }
 
 .edit_record_btn, .delete_record_btn {
-    width: 23%;
+    width: 45%;
     background-color: rgb(20, 18, 18);
     color: white;
     border: none;
