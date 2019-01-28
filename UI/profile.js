@@ -37,7 +37,7 @@ function populateProfilePage(event){
                      </div>
                      <div class="buttons">
                      <button class="edit_record_btn" id=${post.id}>Edit</button>
-                     <button class="delete_record_btn" id=${post.id}><i class="fa fa-trash"></i>Delete</button> 
+                     <button class="delete_record_btn" id=${post.id}><i class="fa fa-trash"></i>  Delete</button> 
                      </div>
                      </div>
                      `

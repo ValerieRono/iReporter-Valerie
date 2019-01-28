@@ -124,11 +124,6 @@ form {
     border-radius: 5px;
 }
 
-#past_records {
-    width: 70%;
-
-}
-
 #summary {
     width:100%;
     display: flex;
