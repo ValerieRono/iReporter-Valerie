@@ -34,7 +34,23 @@ function signUpUser(event){
             .then((response) => response.json())
             .then((data) => {
                 if(data.status === 201){
-                    console.log(data)
+                    fetch('https://ireporter-valerie.herokuapp.com/api/v2/users/login', {
+                        method: 'POST',
+                        headers:{
+                            'Accept':'application/json',
+                            'Content-type':'application/json',
+                            'mode':'cors'
+                        },
+                        body: JSON.stringify({
+                            username: username,
+                            password: password,
+                        })
+                    })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        let token = data['access_token']
+                        localStorage.setItem('token', token)
+                    })
                     localStorage.setItem('username', username)
                     window.location.replace('profile.html')
                 }else{

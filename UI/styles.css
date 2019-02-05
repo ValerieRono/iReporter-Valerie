@@ -31,6 +31,7 @@ ul.navbar li.right {float: right;}
 #main_content {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
     color: white;
 
 }
@@ -248,6 +249,7 @@ th, td {
     color: white;
  }
  #signUp, #signIn, #redFlagForm, #incidentForm, #editForm {
+     width: 100%;
      border: 0px;
  }
 
